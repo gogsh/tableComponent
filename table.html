@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" href="./css/null.css">
   <link rel="stylesheet" href="./css/table.css">
+  <link rel="stylesheet" href="./css/loader.css">
 
   <!-- Захардкоженные скрипты, чтобы можно было потестить без сервера -->
   <script src="./js/components/Table/TableStyles.js"></script>
@@ -26,7 +27,9 @@
 
 <body>
   
-  <table-data is="table-data" id="table" current-page='1' value='test' sort-flow='id-up'></table-data>
+  <table-data is="table-data" id="table" current-page="1" value="test" sort-flow="id-up">
+    <div class="loader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </table-data>
 
 </body>
 

@@ -66,8 +66,8 @@ function createTable(data) {
       </table>
       <div>
         ${navRender(data.length)}
-      </div>      
-      `
+      </div>
+      `      
     }
   }
 }
