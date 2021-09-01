@@ -1,0 +1,20 @@
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  color: rgb(71, 71, 71);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+table {
+  margin-top: 50px;
+  width: 1400px;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px;
+  border: 1px solid rgb(235, 235, 235);
+  box-sizing: border-box;
+}
