@@ -30,11 +30,19 @@ button {
   width: 50px;
   font-size: 24px;
 }
+
 div {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+}
+
+.side_buttons {
+  width: auto;
+  cursor: pointer;  
+  margin: 10px;
+  font-size: 24px;
 }
 </style>`
