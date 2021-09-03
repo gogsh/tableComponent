@@ -41,6 +41,7 @@ function createTable(data) {
         </tr>
         `
       }, ``)
+
       const navRenderForBigData = (numberOfPages, navLimit) => {
         const currentPageNumber = Number(currentPage)
         const firstIndex = 1
@@ -61,21 +62,20 @@ function createTable(data) {
           }
         } else if (lengthFromLast < stepLength) {
           let diff = stepLength - lengthFromLast
-          for (let i = stepLeftIndex - diff; i < lastIndex; i++) {
+          for (let i = stepLeftIndex - diff - 1; i < lastIndex; i++) {
             result += `<button onclick='clickHandlers.switchPageHandler(${i + 1})' 
             class='nav' id='${'button-' + i}' 
             value=${(i + 1).toString()} 
             ${currentPageNumber - 1 === i ? 'disabled' : ''}>${i + 1}</button>`
           }
         } else {
-          for (let i = stepLeftIndex; i < stepRigthIndex; i++) {
+          for (let i = stepLeftIndex - 1; i < stepRigthIndex; i++) {
             result += `<button onclick='clickHandlers.switchPageHandler(${i + 1})' 
             class='nav' id='${'button-' + i}' 
             value=${(i + 1).toString()} 
             ${currentPageNumber - 1 === i ? 'disabled' : ''}>${i + 1}</button>`
           }
         }
-
         return `<button onclick='clickHandlers.switchPageHandler(${1})'
         class='side_buttons' id='${'button-toStart-' + 1}' ${currentPage == 1 ? 'disabled' : ''}
         >В начало</button> ${result}
@@ -83,6 +83,7 @@ function createTable(data) {
         class='side_buttons' id='${'button-toEnd-' + numberOfPages}' ${currentPage == numberOfPages ? 'disabled' : ''}       
         >... ${numberOfPages}</button>`
       }
+
       const navRender = (numberOfPages) => {
         if (numberOfPages > 12) {
           return navRenderForBigData(numberOfPages, 11)
@@ -96,6 +97,7 @@ function createTable(data) {
         }
         return result
       }
+      
       this.shadow.innerHTML = `
         ${tableStyle}
         <table>
